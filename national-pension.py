@@ -73,7 +73,7 @@ class PensionData():
 
 @ st.cache_data         #한번분석했으면 (메모리에 올라가면) 다시 안가져와도 되게 해주는거
 def read_pensiondata():
-    data = PensionData('./data/national-pension.csv?dl=1') # 국민연금 데이터
+    data = PensionData('https://www.dropbox.com/s/nxeo1tziv05ejz7/national-pension.csv?dl=1') # 국민연금 데이터
     return data
 
 data = read_pensiondata()
@@ -150,4 +150,5 @@ if data and company_name:
         )
         
     else:
+
         st.subheader('검색결과가 없습니다')
